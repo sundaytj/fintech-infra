@@ -26,7 +26,7 @@ resource "aws_route53_record" "cert_validation" {
   name    = each.value.name
   type    = each.value.type
   records = [each.value.record]
-  ttl     = 80
+  ttl     = 60
 
   # allow Terraform to UPSERT the record if it already exists
   allow_overwrite = true
